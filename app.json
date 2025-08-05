@@ -5,12 +5,11 @@
     "pages/settings/settings",
     "pages/search/detail/detail",
     "pages/settings/clause/clause",
-    "pages/settings/help/help",
     "pages/settings/feedback/feedback",
     "pages/settings/vote/vote"
   ],
   "tabBar": {
-    "backgroundColor" : "#F7F7FA",
+    "backgroundColor" : "#ffffff",
     "borderStyle": "white",
     "list": [{
       "pagePath": "pages/word/word",
@@ -33,8 +32,8 @@
   },
   "window":{
     "backgroundTextStyle":"light",
-    "backgroundColor": "#EFEFF4",
-    "navigationBarBackgroundColor": "#2C2D31",
+    "backgroundColor": "#667eea",
+    "navigationBarBackgroundColor": "#667eea",
     "navigationBarTitleText": "咩咩单词",
     "navigationBarTextStyle":"white"
   }

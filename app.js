@@ -18,7 +18,7 @@ App({
 
     wilddog.initializeApp(config)
   },
-  getUserInfo: cb => {
+  getUserInfo(cb) {
     if (this.globalData.userInfo) {
       typeof cb == "function" && cb(this.globalData.userInfo)
     } else {

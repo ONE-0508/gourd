@@ -1,7 +1,7 @@
 .vote-container {
-  padding: 40rpx 30rpx;
-  background-color: #f7f7fa;
+  padding: 40rpx;
   min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .vote-header {
@@ -13,14 +13,15 @@
   display: block;
   font-size: 36rpx;
   font-weight: bold;
-  color: #2c2d31;
+  color: white;
   margin-bottom: 20rpx;
+  text-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.2);
 }
 
 .vote-subtitle {
   display: block;
   font-size: 28rpx;
-  color: #666;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
 }
 

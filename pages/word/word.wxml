@@ -1,14 +1,34 @@
 <view class="container">
-    <text class="word-content">{{content}}</text>
-    <view class="pron-container">
-      <image class="pron-icon" src="/images/pron-icon.png"></image>
-      <text class="word-pron" bindtap="read">/{{pron}}/</text>
+  <view class="header">
+    <text class="app-title">咩咩单词</text>
+    <text class="subtitle">每日学习，进步不止</text>
+  </view>
+
+  <view class="word-card card">
+    <view class="word-section">
+      <text class="word-content">{{content}}</text>
+      <view class="pron-container" bindtap="read">
+        <image class="pron-icon" src="/images/pron-icon.png"></image>
+        <text class="word-pron">/{{pron}}/</text>
+      </view>
     </view>
-    <text wx:if="{{showNot}}" class="word-definition">{{definition}}</text>
-    <view class="button-miss" catchtap="show">
-      <text class="word-miss" catchtap="show">不认识</text>
+    
+    <view class="definition-section" wx:if="{{showNot}}">
+      <view class="divider"></view>
+      <text class="word-definition">{{definition}}</text>
     </view>
-    <view class="button-next" catchtap="next">
-      <text class="word-next" catchtap="next">下一个</text>
-    </view>
+  </view>
+
+  <view class="action-buttons">
+    <button class="btn btn-secondary action-btn" bindtap="show">
+      <text class="btn-text">不认识</text>
+    </button>
+    <button class="btn action-btn" bindtap="next">
+      <text class="btn-text">下一个</text>
+    </button>
+  </view>
+
+  <view class="footer">
+    <text class="footer-text">点击音标可播放发音</text>
+  </view>
 </view>

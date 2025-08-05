@@ -13,14 +13,14 @@ Page({
       url: './clause/clause'
     })
   },
-  showHelp: function () {
-    wx.navigateTo({
-      url: './help/help'
-    })
-  },
   showFeedback: function () {
     wx.navigateTo({
       url: './feedback/feedback'
+    })
+  },
+  showVote: function () {
+    wx.navigateTo({
+      url: './vote/vote'
     })
   }
 })
