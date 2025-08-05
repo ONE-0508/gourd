@@ -1,6 +1,6 @@
 <view class="container">
   <view class="header">
-    <text class="app-title">咩咩单词</text>
+    <text class="app-title">葫芦单词</text>
     <text class="subtitle">每日学习，进步不止</text>
   </view>
 
