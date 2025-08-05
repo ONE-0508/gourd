@@ -1,0 +1,33 @@
+<view class="vote-container">
+  <view class="vote-header">
+    <text class="vote-title">用户满意度调查</text>
+    <text class="vote-subtitle">请选择您对咩咩单词的满意度</text>
+  </view>
+
+  <view class="vote-options">
+    <view 
+      wx:for="{{options}}" 
+      wx:key="id"
+      class="vote-option {{selectedOption === item.value ? 'selected' : ''}}"
+      bindtap="selectOption"
+      data-value="{{item.value}}"
+    >
+      <view class="option-content">
+        <text class="option-text">{{item.text}}</text>
+        <view class="option-icon" wx:if="{{selectedOption === item.value}}">
+          <text class="icon">✓</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="vote-submit">
+    <button 
+      class="submit-btn {{selectedOption ? 'active' : ''}}"
+      bindtap="submitVote"
+      disabled="{{!selectedOption}}"
+    >
+      提交投票
+    </button>
+  </view>
+</view> 

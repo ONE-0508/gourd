@@ -12,10 +12,11 @@ Page({
     vocListMax: 12346
   },
 
-  onLoad: () => {
+  onLoad () {
     //从本地缓存单词表选取第一个单词
-    var idx = Math.floor(Math.random() * this.data.worldListMax) + 1
-    var word = list.wordList[idx]
+    var idx = Math.floor(Math.random() * this.data?.worldListMax) + 1
+    var word = list.wordList[idx];
+    console.log(word, 'word');
 
     this.setData({
       content: word.content,
@@ -25,45 +26,56 @@ Page({
     })
   },
 
-  show: () => {
+  show() {
     this.setData({
       showNot: true
     })
   },
 
-  next: () => {
+  next() {
     this.setData({
       showNot: false
     })
-
-    const { vocListMax, content, audioUrl } = this.data
-
+    // const { vocListMax, content, audioUrl } = this.data
     // 从vocabulary.js中选取下一个单词
-    let idx = Math.floor(Math.random() * vocListMax) + 1
+    let idx = Math.floor(Math.random() * this.data?.worldListMax) + 1;
+    const temp = list.wordList[idx];
+    console.log(temp);
+
     this.setData({
-      content: vocList.wordList[idx],
+      content: temp.content,
+      audioUrl: null,
+      pron: temp.pron,
+      definition: temp.definition
     })
 
-    wx.request({
-      url: `https://api.shanbay.com/bdc/search/?word=${content}`,
-      data: {},
-      method: 'GET',
-      success: res => {
-
-        const data = res.data.data
-
-        this.setData({
-          content: data.content,
-          audioUrl: data.us_audio,
-          pron: data.pron,
-          definition: data.definition
-        })
-        innerAudioContext.src = audioUrl
-      }
-    })
+    // wx.request({
+    //   url: `https://api.shanbay.com/bdc/search/?word=${content}`,
+    //   data: {},
+    //   method: 'GET',
+    //   success: res => {
+    //     const data = res.data.data
+    //     this.setData({
+    //       content: data.content,
+    //       audioUrl: data.us_audio,
+    //       pron: data.pron,
+    //       definition: data.definition
+    //     })
+    //     innerAudioContext.src = audioUrl
+    //   },
+    //   error: (err) => {
+    //     console.log(err, 'err');
+    //     this.setData({
+    //       content: temp.content,
+    //       audioUrl: null,
+    //       pron: temp.pron,
+    //       definition: temp.definition
+    //     })
+    //   }
+    // })
   },
 
-  read: () => {
+  read() {
     if (this.data.audioUrl) {
       innerAudioContext.play()
     }

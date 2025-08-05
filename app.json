@@ -6,7 +6,8 @@
     "pages/search/detail/detail",
     "pages/settings/clause/clause",
     "pages/settings/help/help",
-    "pages/settings/feedback/feedback"
+    "pages/settings/feedback/feedback",
+    "pages/settings/vote/vote"
   ],
   "tabBar": {
     "backgroundColor" : "#F7F7FA",
