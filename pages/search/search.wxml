@@ -1,6 +1,6 @@
-<view class="container">
+<view class="search-container">
   <view class="header">
-    <image class="logo" src="/images/face.png"></image>
+    <image class="logo" src="/images/search-logo.png"></image>
     <text class="app-name">葫芦辞典</text>
     <text class="app-desc">专业英语词典，助您学习进步</text>
   </view>
@@ -18,21 +18,6 @@
       <button class="search-btn btn" bindtap="help">
         <text class="search-btn-text">使用说明</text>
       </button>
-    </view>
-  </view>
-
-  <view class="features">
-    <view class="feature-item">
-      <view class="feature-icon">📚</view>
-      <text class="feature-text">专业词库</text>
-    </view>
-    <view class="feature-item">
-      <view class="feature-icon">🔍</view>
-      <text class="feature-text">快速查询</text>
-    </view>
-    <view class="feature-item">
-      <view class="feature-icon">📖</view>
-      <text class="feature-text">详细释义</text>
     </view>
   </view>
 

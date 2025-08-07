@@ -1,6 +1,5 @@
 <view class="container">
   <view class="header">
-    <text class="app-title">葫芦单词</text>
     <text class="subtitle">每日学习，进步不止</text>
   </view>
 
@@ -28,7 +27,4 @@
     </button>
   </view>
 
-  <view class="footer">
-    <text class="footer-text">点击音标可播放发音</text>
-  </view>
 </view>

@@ -15,7 +15,6 @@
 
 .header {
   text-align: center;
-  margin-bottom: 40rpx;
 }
 
 .app-title {
@@ -112,7 +111,7 @@
   flex-direction: column;
   gap: 24rpx;
   width: 100%;
-  margin-bottom: 40rpx;
+  margin-bottom: 160rpx;
 }
 
 .action-btn {
@@ -128,11 +127,3 @@
   font-weight: 600;
 }
 
-.footer {
-  text-align: center;
-}
-
-.footer-text {
-  font-size: 24rpx;
-  color: rgba(255, 255, 255, 0.7);
-}
