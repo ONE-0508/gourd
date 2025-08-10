@@ -1,4 +1,5 @@
-const list = require('../../data/word-list.js')
+
+const { translate } = require('../../assets/translate.js')
 
 Page({
   data: {
@@ -6,39 +7,32 @@ Page({
 
   search: e => {
     let content = e.detail.value
-    const res = list.wordList.find(item => item.content === content);
-    console.log(res);
-    if(res) {
-      wx.navigateTo({
-        url: `./detail/detail?content=${content}&pron=${res.pron}&definition=${res.definition}`
-      })
-    } else {
-      wx.showModal({
-        title: '提示',
-        content: '对不起，查询不到该词信息',
-        showCancel: false
-      })
+    console.log(content);
+    const params = {
+      SourceText: content,
+      Source: 'en',
+      Target: 'zh',
+      ProjectId: 0
     }
+    translate(params).then(res => {
+      console.log(res, 'res');
+      // 处理翻译结果
+      if (res.Response && res.Response.TargetText) {
+        console.log('翻译结果:', res.Response.TargetText);
+        wx.navigateTo({
+          url: `./detail/detail?content=${content}&definition=${res.Response.TargetText}`
+        })
+      }
+    }).catch(err => {
+      console.log(err, 'err');
+      wx.showToast({
+        title: '未查询到该单词',
+        icon: 'none'
+      })
+    }).finally(() => {
+      wx.hideLoading();
+    });
 
-    // wx.request({
-    //   url: `https://api.shanbay.com/bdc/search/?word=${content}`,
-    //   data: {},
-    //   method: 'GET',
-    //   success: res => {
-    //     const { msg } = res.data
-    //     if (msg == "SUCCESS") {
-    //       wx.navigateTo({
-    //         url: `./detail/detail?content=${content}`
-    //       })
-    //     } else {
-    //       wx.showModal({
-    //         title: '提示',
-    //         content: '对不起，查询不到该词信息',
-    //         showCancel: false
-    //       })
-    //     }
-    //   },
-    // })
   },
 
   help: () => {

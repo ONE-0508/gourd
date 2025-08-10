@@ -1,7 +1,7 @@
 <view class="vote-container">
   <view class="vote-header">
-    <text class="vote-title">用户满意度调查</text>
-    <text class="vote-subtitle">请选择您对葫芦单词的满意度</text>
+    <text class="vote-title">深圳市第二届“星火杯”</text>
+    <text class="vote-subtitle">少儿才艺表演赛最佳新星</text>
   </view>
 
   <view class="vote-options">

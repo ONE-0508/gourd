@@ -2,11 +2,16 @@ Page({
   data: {
     selectedOption: '',
     options: [
-      { id: '1', text: '非常满意', value: 'very_satisfied' },
-      { id: '2', text: '比较满意', value: 'satisfied' },
-      { id: '3', text: '一般', value: 'normal' },
-      { id: '4', text: '不太满意', value: 'unsatisfied' },
-      { id: '5', text: '非常不满意', value: 'very_unsatisfied' }
+      { id: '1', text: '王树维', value: '1' },
+      { id: '2', text: '张梦雅', value: '2' },
+      { id: '3', text: '韩琳琳', value: '3' },
+      { id: '4', text: '任  奇', value: '4' },
+      { id: '5', text: '刘之轩', value: '5' },
+      { id: '6', text: '林舒曼', value: '6' },
+      { id: '7', text: '何爱希', value: '7' },
+      { id: '8', text: '张海轩', value: '8' },
+      { id: '9', text: '汪谭伟', value: '9' },
+      { id: '0', text: '李  馨', value: '0' },
     ]
   },
 

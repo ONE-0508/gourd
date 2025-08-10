@@ -2,6 +2,7 @@
   "pages":[
     "pages/word/word",
     "pages/search/search",
+    "pages/wordbook/wordbook",
     "pages/settings/settings",
     "pages/search/detail/detail",
     "pages/settings/clause/clause",

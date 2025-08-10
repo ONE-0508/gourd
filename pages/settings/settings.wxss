@@ -96,3 +96,10 @@
   font-size: 24rpx;
   color: rgba(255, 255, 255, 0.7);
 }
+
+.setting-item {
+  padding: 30rpx 20rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 32rpx;
+  background: #fff;
+}

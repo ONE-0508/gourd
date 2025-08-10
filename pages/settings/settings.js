@@ -22,5 +22,10 @@ Page({
     wx.navigateTo({
       url: './vote/vote'
     })
+  },
+  goToWordbook: function() {
+    wx.navigateTo({
+      url: '/pages/wordbook/wordbook'
+    });
   }
 })

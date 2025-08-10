@@ -1,8 +1,5 @@
 // app.js
 
-const hotapp = require('./utils/hotapp.js')
-// hotapp.setDebug(true)
-
 const wilddog = require('./utils/wilddog-weapp-all.js')
 const config = {
   syncURL: 'https://miemie.wilddogio.com',
