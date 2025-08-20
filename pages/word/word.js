@@ -16,10 +16,17 @@ Page({
     vocListMax: 12346,
     currentWord: null,
     showNot: false, // 控制释义显示
-    showAddBtn: false // 控制“加到生词本”按钮显示
+    showAddBtn: false, // 控制“加到生词本”按钮显示
+
+    // 控制插屏广告显示
+    showAd: true,
+    app:null,
   },
 
   onLoad () {
+    this.setData({
+      app: wx
+    })
     //从本地缓存单词表选取第一个单词
     var idx = Math.floor(Math.random() * vocList.wordList.length);
     console.log(idx, vocList.wordList.length);
@@ -59,6 +66,25 @@ Page({
     }).finally(() => {
       wx.hideLoading();
     });
+  },
+
+
+  adShow(e){
+    console.log(e)
+  },
+
+  adClose(e){
+    console.log(e)
+  },
+
+  onAdLoad(e) {
+    console.log('原生模板广告加载成功', e.detail.message)
+  },
+  onAdError(e) {
+    console.error('原生模板广告加载失败', e.detail.message, e.detail.err)
+  },
+  onAdClose(e) {
+    console.log('原生模板广告关闭', e.detail.message)
   },
 
   show() {

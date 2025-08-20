@@ -1,7 +1,7 @@
 <view class="search-container">
   <view class="header">
-    <image class="logo" src="/images/search-logo.png"></image>
-    <text class="app-name">葫芦辞典</text>
+    <image class="logo" src="/images/logo.png"></image>
+    <text class="app-name">百万词典</text>
     <text class="app-desc">专业英语词典，助您学习进步</text>
   </view>
 

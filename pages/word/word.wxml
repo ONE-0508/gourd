@@ -29,4 +29,16 @@
     </button>
   </view>
 
+  <adset-inter appKey="your_appKey" advertId="your_advertId" show="{{showAd}}"
+    bind:adShow="adShow" bind:adClose="adClose" app="{{app}}"
+  ></adset-inter>
+
+  <adset-draw
+    appKey="your_app_key"
+    advertId="your_advert_id"
+    bind:adLoad="onAdLoad"
+    bind:adError="onAdError"
+    bind:adClose="onAdClose"
+  />
+
 </view>

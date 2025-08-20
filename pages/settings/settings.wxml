@@ -32,6 +32,6 @@
   </view>
 
   <view class="footer">
-    <text class="footer-text">葫芦单词 v1.0.6</text>
+    <text class="footer-text">版本号 v1.0.0</text>
   </view>
 </view>

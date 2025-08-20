@@ -35,7 +35,7 @@
     "backgroundTextStyle":"light",
     "backgroundColor": "#667eea",
     "navigationBarBackgroundColor": "#667eea",
-    "navigationBarTitleText": "葫芦单词",
+    "navigationBarTitleText": "单词学习挑战助手",
     "navigationBarTextStyle":"white"
   }
 }

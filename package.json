@@ -1,7 +1,7 @@
 {
   "name": "miemie",
   "version": "1.0.0",
-  "description": "微信小程序：葫芦单词",
+  "description": "微信小程序：单词学习挑战助手",
   "homepage": "https://github.com/ONE-0508/gourd#readme",
   "bugs": {
     "url": "https://github.com/ONE-0508/gourd/issues"
