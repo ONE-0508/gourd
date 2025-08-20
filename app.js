@@ -15,8 +15,8 @@ App({
 
     wilddog.initializeApp(config)
 
-    this.getAccessToken()
-    this.getQRCode()
+    // this.getAccessToken()
+    // this.getQRCode()
   },
   getUserInfo(cb) {
     if (this.globalData.userInfo) {

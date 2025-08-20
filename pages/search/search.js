@@ -4,6 +4,16 @@ const { translate } = require('../../assets/translate.js')
 Page({
   data: {
   },
+  onShareAppMessage() {
+    console.log('分享当前页面');
+    return {
+    }
+  },
+  onShareTimeline() {
+    console.log('分享到朋友圈');
+    return {
+    }
+  },
 
   search: e => {
     let content = e.detail.value
