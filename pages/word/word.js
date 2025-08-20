@@ -69,13 +69,9 @@ Page({
   },
   onShareAppMessage() {
     console.log('分享当前页面');
-    return {
-    }
   },
   onShareTimeline() {
     console.log('分享到朋友圈');
-    return {
-    }
   },
 
 

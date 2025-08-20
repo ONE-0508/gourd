@@ -14,6 +14,18 @@ Page({
       { id: '0', text: '李  馨', value: '0' },
     ]
   },
+  onShareAppMessage() {
+    console.log('分享当前页面');
+    return {
+      path: 'pages/settings/vote/vote'
+    };
+  },
+  onShareTimeline() {
+    console.log('分享到朋友圈');
+    return {
+      path: 'pages/settings/vote/vote'
+    };
+  },
 
   // 选择投票选项
   selectOption: function(e) {
