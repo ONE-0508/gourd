@@ -11,14 +11,6 @@ Page({
   showClause: function () {
     wx.navigateTo({
       url: './clause/clause'
-<<<<<<< HEAD
-    })
-  },
-  showHelp: function () {
-    wx.navigateTo({
-      url: './help/help'
-=======
->>>>>>> feature
     })
   },
   showFeedback: function () {
