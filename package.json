@@ -1,0 +1,24 @@
+{
+  "name": "miemie",
+  "version": "1.0.0",
+  "description": "微信小程序：单词学习挑战助手",
+  "homepage": "https://github.com/ONE-0508/gourd#readme",
+  "bugs": {
+    "url": "https://github.com/ONE-0508/gourd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ONE-0508/gourd.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "tencentcloud-sdk-nodejs-tmt": "^4.1.74"
+  }
+}

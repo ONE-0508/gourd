@@ -1,56 +1,90 @@
-# 咩咩单词
+# 单词挑战 - 微信小程序
 
-微信小程序：咩咩单词
+一个帮助学习英语单词的微信小程序。
 
-![](images/search-logo.png)
+## 功能特性
 
-## Screenshots
+- 随机展示英语单词
+- 腾讯云翻译API支持
+- 生词本功能
+- 音频播放支持
 
-![](http://airing.ursb.me/image/miemie/Screenshots1.jpg-jieping.jpg)
+## 安装和配置
 
-![](http://airing.ursb.me/image/miemie/Screenshots2.jpg-jieping.jpg)
+### 1. 安装依赖
 
-![](http://airing.ursb.me/image/miemie/Screenshots3.jpg-jieping.jpg)
+```bash
+pnpm install
+```
 
-![](http://airing.ursb.me/image/miemie/Screenshots4.jpg-jieping.jpg)
+### 2. 配置腾讯云API
 
-## 版本说明
+在使用翻译功能之前，需要配置腾讯云API密钥：
 
-### v0.0.1
+1. 登录 [腾讯云控制台](https://console.cloud.tencent.com/)
+2. 创建或使用现有的API密钥
+3. 编辑 `utils/config.js` 文件，填入你的密钥信息：
 
-1. 增加单词学习模块，包括单词拼写、音标、含义等
-2. 增加单词查询模块
-3. 增加个人模块
-4. 词库选用英语专四、专八共计12347个单词
+```javascript
+module.exports = {
+  tencentcloud: {
+    secretId: '你的SecretId',
+    secretKey: '你的SecretKey',
+    endpoint: 'tmt.tencentcloudapi.com',
+    service: 'tmt',
+    version: '2018-03-21',
+    region: 'ap-chongqing'
+  }
+};
+```
 
-### v1.0.1
+### 3. 开通腾讯云机器翻译服务
 
-1. 本地缓存500词
-2. 开放反馈功能
-3. 增加开发者muruko0713
-4. 对接 hotapp 数据统计
+确保你的腾讯云账号已开通机器翻译服务，并配置了相应的权限。
 
-### v1.0.2
+## 项目结构
 
-1. 优化单词查询说明
+```
+miemie/
+├── app.js                 # 小程序入口文件
+├── app.json              # 小程序配置文件
+├── app.wxss              # 全局样式文件
+├── assets/               # 资源文件
+│   ├── translate.js      # 翻译API封装
+│   └── font/            # 字体文件
+├── data/                 # 数据文件
+│   ├── vocabulary.js     # 词汇数据
+│   └── word-list.js     # 单词列表
+├── images/               # 图片资源
+├── pages/                # 页面文件
+│   ├── index/           # 首页
+│   ├── search/          # 搜索页面
+│   ├── word/            # 单词学习页面
+│   ├── wordbook/        # 生词本页面
+│   └── settings/        # 设置页面
+├── utils/                # 工具文件
+│   └── config.js        # 配置文件
+└── package.json          # 项目依赖
+```
 
-### v1.0.3
+## 使用说明
 
-1. 继续优化单词查询说明
-2. 撤销“我的单词”入口
+1. 在微信开发者工具中导入项目
+2. 配置腾讯云API密钥
+3. 编译运行项目
 
-### v1.0.4
+## 注意事项
 
-1. 优化按钮点击事件
+- 请妥善保管你的腾讯云API密钥，不要提交到公开代码仓库
+- 建议在生产环境中使用环境变量或更安全的密钥管理方式
+- 腾讯云API有调用频率限制，请注意合理使用
 
-### v1.0.5
+## 技术栈
 
-1. 本地词库增加至1000词
-2. 修复帮助页面信息显示错误
+- 微信小程序原生开发
+- 腾讯云机器翻译API
+- CryptoJS 加密库
 
-### v1.0.6
+## 许可证
 
-1. 更新播放音频功能
-2. “下一个”单词优化
-
-感谢 [@PaiGuFan](https://github.com/PaiGuFan) 的 PR。
+ISC

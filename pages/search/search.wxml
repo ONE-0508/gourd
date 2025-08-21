@@ -1,10 +1,27 @@
-<view class="container">
-  <image class="logo" src="/images/search-logo.png"></image>
-  <text class="name">咩咩辞典</text>
-  <view class="input-container">
-    <input class="input-search" bindconfirm="search" placeholder="请输入您要查询的单词" type="text"/>
+<view class="search-container">
+  <view class="header">
+    <image class="logo" src="/images/logo.png"></image>
+    <text class="app-name">百万词典</text>
+    <text class="app-desc">专业英语词典，助您学习进步</text>
   </view>
-  <view class="button-search" bindtap="help">
-    <text class="text-search">说明</text>
+
+  <view class="search-card card">
+    <view class="search-section">
+      <view class="search-input-container">
+        <input 
+          class="search-input input" 
+          bindconfirm="search" 
+          placeholder="请输入您要查询的单词" 
+          type="text"
+        />
+      </view>
+      <button class="search-btn btn" bindtap="help">
+        <text class="search-btn-text">使用说明</text>
+      </button>
+    </view>
+  </view>
+
+  <view class="footer">
+    <text class="footer-text">输入单词后点击回车键即可查询</text>
   </view>
 </view>

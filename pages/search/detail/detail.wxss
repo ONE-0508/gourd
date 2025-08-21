@@ -16,7 +16,9 @@
 
 .pron-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .pron-icon {
@@ -32,7 +34,6 @@
 }
 
 .word-definition {
-  margin-top: 194rpx;
   font-family: Yuanti TC;
   font-size: 30rpx;
   color: #585858;

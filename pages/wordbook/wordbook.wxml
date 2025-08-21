@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="word-list">
+    <block wx:for="{{words}}" wx:key="timestamp">
+      <view class="word-item" data-index="{{index}}" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd">
+        <view class="word-info">
+          <text class="word-en">{{item.content}}</text>
+          <!-- <text class="word-ph">/{{item.pron}}/</text> -->
+          <text class="word-zh">{{item.definition}}</text>
+        </view>
+        <button wx:if="{{editMode}}" class="del-btn" data-index="{{index}}" bindtap="deleteWord">删除</button>
+      </view>
+    </block>
+  </view> 
+    
+  <button class="btn btn-secondary" bindtap="toggleEdit" >
+    {{editMode ? '完成' : '编辑'}}
+  </button>
+</view>

@@ -1,8 +1,13 @@
 <view class="container">
-    <text class="word-content">{{content}}</text>
-    <view class="pron-container">
-      <image class="pron-icon" src="/images/pron-icon.png"></image>
-      <text class="word-pron" bindtap="read">/{{pron}}/</text>
+    <text class="word-content">{{word.content}}</text>
+    <view class="pron-container card">
+      <!-- <image class="pron-icon" src="/images/pron-icon.png"></image> -->
+      <!-- <text class="word-pron" bindtap="read">/{{word.pron}}/</text> -->
+      <text class="word-definition">{{word.definition}}</text>
     </view>
-    <text class="word-definition">{{definition}}</text>
+    
+
+    <button class="btn action-btn btn-secondary" bindtap="addToWordbook">
+      <text class="btn-text">加到生词本</text>
+    </button>
 </view>
